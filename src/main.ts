@@ -11,8 +11,8 @@ if(!cardContainer || !pokemonFilter ||!filterButton){
     throw new Error ("Issue with selector")
 }
 
+
 const handleRenderCards = (pokemonArray: Pokemon[]) => {
-    
     const pokemons = Object.values(pokemonArray);
     cardContainer.innerHTML ="";
     pokemons.forEach((pokemon: Pokemon) => {
@@ -27,6 +27,11 @@ const handleRenderCards = (pokemonArray: Pokemon[]) => {
     })
 }
 
+const handleRenderFunction = () => {
+    handleRenderCards(pokemonArray);
+}
+console.log(handleRenderCards(pokemonArray))
+
 const handleFilter = () => {
     const searchTerm = pokemonFilter.value.toLowerCase();
     const filteredPokemons = pokemonArray.filter((pokemon) =>{
@@ -39,5 +44,6 @@ const handleFilter = () => {
     handleRenderCards(filteredPokemons);
 }
 
-cardContainer.addEventListener("load", handleRenderCards(pokemonArray));
+
+cardContainer.addEventListener("load", handleRenderFunction);
 filterButton.addEventListener("click", handleFilter);

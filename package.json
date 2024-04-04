@@ -3,14 +3,22 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Faridah-Abdulsalam.github.io/pokemon-tech-test",
+  "author": "Faridah",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "sass": "^1.64.2",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5",
-    "sass": "^1.64.2"
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "build": "^0.1.4",
+    "npm": "^10.5.1",
+    "run": "^1.5.0"
   }
 }
